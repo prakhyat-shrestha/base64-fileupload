@@ -36,13 +36,13 @@ function App() {
   const handleInputChange = (id) => (evt) => {
     const { value } = evt.target;
     setInputList((list) =>
-      list.map((el) =>                 // <-- shallow copy array
-        el.id === id                   // <-- match by id
+      list.map((el) =>                 
+        el.id === id                   
           ? {
-              ...el,                   // <-- shallow copy element
-              [evt.target.name]: value // <-- update key/value
+              ...el,                  
+              [evt.target.name]: value 
             }
-          : el                         // <-- or return current element
+          : el                         
       )
     );
   };
@@ -71,13 +71,13 @@ function App() {
     //console.log("base 64",base64)
 
     setInputList((list) =>
-      list.map((el) =>                 // <-- shallow copy array
-        el.id === id                   // <-- match by id
+      list.map((el) =>                 
+        el.id === id                  
           ? {
-              ...el,                   // <-- shallow copy element
-              [evt.target.name]: base64 // <-- update key/value
+              ...el,                 
+              [evt.target.name]: base64 
             }
-          : el                         // <-- or return current element
+          : el                         
       )
     );
   };
@@ -89,7 +89,7 @@ function App() {
 
 
 
-  console.log("zzz",inputList)
+  //console.log("zzz",inputList)
 
   return (
     <>
@@ -111,7 +111,7 @@ function App() {
         </div>
       ))}
 
-<br/><br/><br/>
+      <br/><br/><br/>
       <button onClick={handleSubmit}> Upload Files </button>
     </>
   );
